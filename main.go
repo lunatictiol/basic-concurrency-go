@@ -23,7 +23,7 @@ func main() {
 		"epsilon",
 		"theta",
 	}
-	waitGroup.Add(7)
+	waitGroup.Add(len(words))
 	for i, x := range words {
 		go printSomething(fmt.Sprintf("%d:%s", i, x), &waitGroup)
 	}
